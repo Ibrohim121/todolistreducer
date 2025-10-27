@@ -1,3 +1,4 @@
+ 
 import { useReducer, useState } from 'react';
 import './App.css';
 
@@ -37,7 +38,7 @@ function App() {
         onChange={e => setInput(e.target.value)}
         placeholder="Yangi vazifa..."
       />
-      <button onClick={handleAdd}>Qo‘shish</button>
+      <button onClick={handleAdd}>Qoshish</button>
 
       <ul>
         {state.map(todo => (
@@ -52,7 +53,7 @@ function App() {
               {todo.text}
             </span>
             <button onClick={() => dispatch({ type: 'DELETE_TODO', payload: todo.id })}>
-              Delete
+                Ochirish
             </button>
           </li>
         ))}
@@ -62,5 +63,3 @@ function App() {
 }
 
 export default App;
-
-
